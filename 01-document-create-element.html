@@ -8,12 +8,22 @@
   <script type="text/babel">
     const rootElement = document.getElementById("root");
 
-    // React Fragment
+    // React Component
+    const Message = props => <div className="message">{ props.children }</div>
     const element = (
-      <>
-        <span>Hello</span> <span>World</span>
-      </>
+      <div className="container">
+        <Message>Hello World</Message>
+        <Message>Goodbye World</Message>
+      </div>
     )
+    ReactDOM.render(element, rootElement)
+
+    // React Fragment
+    // const element = (
+    //   <>
+    //     <span>Hello</span> <span>World</span>
+    //   </>
+    // )
     // const element = (
     //   <React.Fragment>
     //     <span>Hello</span> <span>World</span>
@@ -28,7 +38,7 @@
     //   " ",
     //   worldElement
     // )
-    ReactDOM.render(element, rootElement)
+    // ReactDOM.render(element, rootElement)
 
     // Props object
     // const className = "container"
